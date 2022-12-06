@@ -34,7 +34,7 @@ export class TableSelfieComponent implements OnChanges, OnInit {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.info('Oula ca change', changes);
+    this.logger.log('Oula ca change', changes);
   }
 
   clickPourEdit(item: Selfie): void {
