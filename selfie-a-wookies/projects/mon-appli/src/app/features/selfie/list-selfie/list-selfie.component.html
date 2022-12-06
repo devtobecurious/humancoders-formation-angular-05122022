@@ -1,0 +1,34 @@
+
+<div class="filters">
+  <h3>Filtrer</h3>
+
+  <!-- Filtre sur la planete où a eu lieu le selfie -->
+  <label>Planète : </label>
+  <saw-select></saw-select>
+</div>
+<div>
+  <button class="add" (click)="addSelfie()">[ + ]</button>
+  <button class="remove" (click)="removeSelfie()">[ - ]</button>
+</div>
+
+<span *ngIf="itemsEmpty" ><i>Aucun selfie présent</i></span>
+
+<saw-table-selfie [items]="selfies" titre="Liste des selfies"
+                  (pourEditionSelfie)="editSelfie($event)" ></saw-table-selfie>
+
+
+
+<!--
+  journée 01 : ng for et ng if travaillé
+  <table *ngIf="! itemsEmpty">
+  <tr *ngFor="let item of items; ">
+    <td>
+      {{ item.titre }}
+    </td>
+    <td>
+      {{ item.description }}
+    </td>
+  </tr>
+
+</table> -->
+

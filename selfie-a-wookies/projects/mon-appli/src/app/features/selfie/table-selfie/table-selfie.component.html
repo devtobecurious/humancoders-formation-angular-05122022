@@ -1,0 +1,16 @@
+<h2>{{ titre }}</h2>
+
+<table>
+  <tr *ngFor="let item of items; ">
+    <td>
+      {{ item.titre }}
+    </td>
+    <td>
+      {{ item.description }}
+    </td>
+    <td>
+      <button (click)="clickPourEdit(item)">Edit</button>
+    </td>
+  </tr>
+
+</table>
