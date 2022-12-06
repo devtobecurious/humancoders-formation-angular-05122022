@@ -2,7 +2,7 @@
  * Contrat représentant un selfie dans l'appli
  */
 export interface Selfie {
-  titre: string;
+  title: string;
   description: string;
   imageUrl: string;
 }
