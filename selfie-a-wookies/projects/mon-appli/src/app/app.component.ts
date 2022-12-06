@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Selfie } from './features/selfie/models';
 
 @Component({
   selector: 'app-root',
@@ -11,5 +12,15 @@ export class AppComponent {
 
   aNePasFaire(value: string): string {
     return value.toLowerCase();
+  }
+
+  leSelfieRecu : Selfie | null = null;
+
+  displayEdition(selfie: Selfie): void {
+    this.leSelfieRecu = selfie;
+  }
+
+  hideEdition(): void {
+    this.leSelfieRecu = null;
   }
 }

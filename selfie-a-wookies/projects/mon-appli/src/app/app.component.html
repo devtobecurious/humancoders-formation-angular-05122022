@@ -4,4 +4,8 @@
 <app-poc></app-poc>
 <app-poc></app-poc>
 
-<app-list-selfie></app-list-selfie>
+<app-list-selfie (editerSelfie)="displayEdition($event)"></app-list-selfie>
+<saw-edit-selfie *ngIf="leSelfieRecu"
+                  (cancelEdition)="hideEdition()"
+                  [monSelfie]="leSelfieRecu">
+</saw-edit-selfie>

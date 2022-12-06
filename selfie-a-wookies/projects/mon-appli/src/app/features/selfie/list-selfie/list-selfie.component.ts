@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { outputAst } from '@angular/compiler';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { JeSuisPasSelfie, Selfie } from '../models';
 
 @Component({
@@ -11,6 +12,8 @@ export class ListSelfieComponent {
   selfies: Selfie[] = [
      { description: 'cest beau !!!', titre: 'Une journée à Mustafar', imageUrl: '' }
   ];
+
+  @Output() editerSelfie = new EventEmitter<Selfie>();
 
   log(): void {
     console.info('Appel du template');
@@ -29,7 +32,7 @@ export class ListSelfieComponent {
   }
 
   editSelfie(item: Selfie): void {
-    console.info('Edit !!', item);
+    this.editerSelfie.emit(item);
   }
 
   get itemsEmpty(): boolean {

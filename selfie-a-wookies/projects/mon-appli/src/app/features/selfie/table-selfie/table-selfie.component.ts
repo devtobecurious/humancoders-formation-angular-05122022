@@ -2,6 +2,7 @@ import { Output } from '@angular/core';
 import { OnInit } from '@angular/core';
 import { EventEmitter } from '@angular/core';
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { LoggerService } from '../../../shared/tools/logger.service';
 import { Selfie } from '../models';
 
 @Component({
@@ -23,6 +24,9 @@ export class TableSelfieComponent implements OnChanges, OnInit {
 
   get titre(): string {
     return this._titre;
+  }
+
+  constructor(private readonly logger: LoggerService) {
   }
 
   ngOnInit(): void {
