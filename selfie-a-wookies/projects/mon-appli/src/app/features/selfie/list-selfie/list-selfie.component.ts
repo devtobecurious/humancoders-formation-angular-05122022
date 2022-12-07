@@ -1,6 +1,7 @@
 import { outputAst } from '@angular/compiler';
 import { Component, EventEmitter, Output, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { LoggerService } from '../../../shared/tools/logger.service';
 import { JeSuisPasSelfie, Selfie } from '../models';
 import { SelfieService } from '../services/selfie.service';
 
@@ -19,7 +20,7 @@ export class ListSelfieComponent implements OnInit, OnDestroy {
 
   @Output() editerSelfie = new EventEmitter<Selfie>();
 
-  constructor(private readonly service: SelfieService) {}
+  constructor(private readonly service: SelfieService, private readonly logger: LoggerService) {}
 
   ngOnDestroy(): void {
     this.mainSubscription.unsubscribe();

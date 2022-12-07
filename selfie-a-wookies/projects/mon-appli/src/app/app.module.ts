@@ -8,11 +8,13 @@ import { AppComponent } from './app.component';
 import { SelfieModule } from './features/selfie/selfie.module';
 import { PocComponent } from './poc/poc.component';
 import { LoggerService } from './shared/tools/logger.service';
+import { DiscoverObservableComponent } from './shared/learnings/discover-observable/discover-observable.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PocComponent
+    PocComponent,
+    DiscoverObservableComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +23,7 @@ import { LoggerService } from './shared/tools/logger.service';
     SelfieModule
   ],
   providers: [
-    // LoggerService, ça se faisai comme ça avant angular 7
+    // LoggerService, ça se faisait comme ça avant angular 7
   ],
   bootstrap: [AppComponent]
 })
