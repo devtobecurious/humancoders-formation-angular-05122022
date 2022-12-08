@@ -4,6 +4,7 @@ import { ListSelfieComponent } from './list-selfie/list-selfie.component';
 import { ComboBoxModule } from '../../shared/ui/combo-box/combo-box.module';
 import { TableSelfieComponent } from './table-selfie/table-selfie.component';
 import { EditSelfieComponent } from './edit-selfie/edit-selfie.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -15,7 +16,8 @@ import { EditSelfieComponent } from './edit-selfie/edit-selfie.component';
   ],
   imports: [
     CommonModule,
-    ComboBoxModule
+    ComboBoxModule,
+    FormsModule
   ],
   exports: [
     ListSelfieComponent,

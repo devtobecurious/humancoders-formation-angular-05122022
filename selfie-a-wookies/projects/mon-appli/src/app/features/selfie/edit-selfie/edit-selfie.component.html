@@ -1,12 +1,17 @@
+{{ monSelfie | json }}
+
 <div class="row">
-  <!-- <form class="col s12"> -->
+  <form #selfieForm="ngForm" class="col s12">
     <div class="row">
       <div class="input-field col s6">
-        <input placeholder="Placeholder" id="first_name" type="text" class="validate" value="{{ monSelfie.title }}">
-        <label for="first_name">Titre</label>
+        <input placeholder="Placeholder" required id="title" name="title" type="text" class="validate" [(ngModel)]="monSelfie.title">
+        <label for="title">Titre</label>
       </div>
     </div>
-  <!-- </form> -->
+
+    <button (click)="save()" [disabled]="! selfieForm.form.valid">Enregistrer</button>
+  </form>
 </div>
+
 
 <button (click)="clickToCancel()">Annuler</button>

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ListPersonComponent } from './list-person/list-person.component';
 import { CardPersonComponent } from './card-person/card-person.component';
+import { PersonRoutingModule } from './person-routing.module';
 
 
 
@@ -11,7 +12,8 @@ import { CardPersonComponent } from './card-person/card-person.component';
     CardPersonComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    PersonRoutingModule
   ],
   exports: [
     ListPersonComponent

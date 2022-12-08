@@ -13,4 +13,9 @@ export class EditSelfieComponent {
   clickToCancel(): void {
     this.cancelEdition.emit({});
   }
+
+  save(): void {
+    // appel de mon api
+    // this.service.save(this.monSelfie).subscribe();
+  }
 }

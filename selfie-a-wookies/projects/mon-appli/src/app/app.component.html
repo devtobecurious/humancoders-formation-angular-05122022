@@ -1,3 +1,5 @@
+<saw-menu></saw-menu>
+
 <h1>{{ title | uppercase }}</h1>
 <h2>{{ aNePasFaire(subTitle) }}</h2>
 
@@ -5,12 +7,16 @@
 
 <!-- <saw-list-person></saw-list-person> -->
 
-<!--
+
 <app-poc></app-poc>
 <app-poc></app-poc>
 
-<app-list-selfie (editerSelfie)="displayEdition($event)"></app-list-selfie>
 <saw-edit-selfie *ngIf="leSelfieRecu"
                   (cancelEdition)="hideEdition()"
                   [monSelfie]="leSelfieRecu">
-</saw-edit-selfie> -->
+</saw-edit-selfie>
+<app-list-selfie (editerSelfie)="displayEdition($event)"></app-list-selfie>
+
+
+<router-outlet></router-outlet>
+<!-- Génération ici -->

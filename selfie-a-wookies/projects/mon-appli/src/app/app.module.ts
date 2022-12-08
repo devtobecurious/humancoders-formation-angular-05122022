@@ -10,6 +10,7 @@ import { PocComponent } from './poc/poc.component';
 import { LoggerService } from './shared/tools/logger.service';
 import { DiscoverObservableComponent } from './shared/learnings/discover-observable/discover-observable.component';
 import { PersonModule } from './features/person/person.module';
+import { MenuComponent } from './shared/ui/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PersonModule } from './features/person/person.module';
     AppRoutingModule,
     HttpClientModule,
     SelfieModule,
-    PersonModule
+    PersonModule,
+    MenuComponent
   ],
   providers: [
     // LoggerService, ça se faisait comme ça avant angular 7
